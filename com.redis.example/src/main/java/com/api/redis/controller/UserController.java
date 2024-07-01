@@ -1,7 +1,10 @@
 package com.api.redis.controller;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -35,8 +38,12 @@ public class UserController {
 	}
 	
 	@GetMapping
-	public Map<Object,Object> getAll(){
-		return userDao.findAll();
+	public List<User> getAll(){
+		Map<Object, Object> all = userDao.findAll();
+		Collection<Object> values = all.values();
+		List<User> collect = values.stream().map(value -> (User) value).collect(Collectors.toList());
+		return collect;
+		
 	}
 	
 	@DeleteMapping("/{userId}")
