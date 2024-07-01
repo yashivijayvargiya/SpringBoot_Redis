@@ -20,7 +20,7 @@ This Spring Boot application leverages Redis for managing user data. It provides
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/yourusername/redis-user-management.git](https://github.com/yashivijayvargiya/SpringBoot_Redis/)
+   git clone https://github.com/yashivijayvargiya/SpringBoot_Redis/
    cd redis-user-management
    ```
 
