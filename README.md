@@ -58,7 +58,7 @@ Located in `com.api.redis.controller`, this class is annotated with `@RestContro
 
 Located in `com.api.redis.dao`, this class is annotated with `@Repository` to indicate it is a DAO component.
 
-- **`save`**: Saves a user in the Redis hash.
+- **`save`**: Saves a user in the Redis hash .
 - **`get`**: Retrieves a user from the Redis hash by ID.
 - **`findAll`**: Retrieves all users from the Redis hash.
 - **`delete`**: Deletes a user from the Redis hash by ID.
